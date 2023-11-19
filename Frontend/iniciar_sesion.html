@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso al cliente</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <li class="search-form">
+                <form action="/buscar" method="get">
+                     <div class="search-container">
+                         <input type="text" name="q" placeholder="Buscar...">
+                         <button type="submit" class="search-button"></button>
+                     </div>
+                 </form>
+             </li>                
+             <li class="Ubicacion_Img_opciones"><a href="mi_cuenta.html"> <img class="Img_opciones" src="./Iconos_de_opciones/Icono_mi_cuenta.png" alt="Inicio"> Mi cuenta</a></li>
+             <li class="Ubicacion_Img_opciones"><a href="lista_deseos.html"> <img class="Img_opciones" src="./Iconos_de_opciones/Icono_Lista_Deseo_Vacia.png" alt="Lista de deseos"> Lista de deseos</a></li>
+             <li class="Ubicacion_Img_opciones"><a href="iniciar_sesion.html"> <img class="Img_opciones" src="./Iconos_de_opciones/Icono_usuario_cuenta.png" alt="Iniciar sesion"> Iniciar sesion</a></li>
+             <li class="Ubicacion_Img_opciones"><a href="crear_cuenta.html"> <img class="Img_opciones" src="./Iconos_de_opciones/Icono_Crear_cuenta.png" alt="Crear cuenta"> Crear cuenta</a></li>
+             <li class="Ubicacion_Img_index"><a href="index.html"><img class="Img_index" src="./Iconos_de_opciones/Icono_Index.png"></a></li> 
+             <li class="Ubicacion_Img_opciones"><a href="carrito.html"> <img class="Img_opciones" src="./Iconos_de_opciones/Icono_Carrito_Compras.png" alt="Carrito"> Carrito</a></li>
+        </nav>
+    </header>
+    <article>
+        <section id="Clientes_registrados">
+            <h1 id="h1_iniciar_sesion">Clientes registrados</h1>
+            <h2 id="h2_iniciar_sesion">Inicie sesión con una cuenta asociada</h2>
+            <h3 id="h3_iniciar_sesion1">Correo electrónico</h3><h3 id="obligatorio1">*</h3>
+            <h3 id="h3_iniciar_sesion2">Contraseña</h3><h3 id="obligatorio2">*</h3>
+            <h4 id="h4_iniciar_sesion1">Recordar <br>
+                Credenciales
+            </h4>
+    
+            <form action="/procesar_formulario" method="post">
+               
+                <input type="email" id="correo" name="correo" required>
+                <input type="password" id="contrasena" name="contrasena" required>
+                <input type="checkbox" id="Mostrar_Contrasena" onchange="togglePasswordVisibility()">
+                <label id="h4_2" for="Mostrar_Contrasena">Mostrar contraseña</label>
+                <input type="checkbox" id="Guardar_Credenciales">
+                <input type="submit" value="Iniciar Sesión" id="b_iniciar_sesion">
+                <button id="b_olvidar_contrasena" type="button" onclick="olvidasteContrasena()">¿Olvidaste tu contraseña?</button>
+            </form>   
+            <script>
+                function togglePasswordVisibility() {
+                    var passwordInput = document.getElementById("contrasena");
+                    var showPasswordCheckbox = document.getElementById("Mostrar_Contrasena");
+        
+                    // Cambia el tipo de input según si la casilla está marcada o no
+                    passwordInput.type = showPasswordCheckbox.checked ? "text" : "password";
+                }
+            </script>
+        </section>
+        <hr id="Regla_Horizontal_Iniciar_Sesion">
+        <section id="Clientes_nuevos">
+            <h1 id="h1_usuarios_nuevos">Clientes nuevos</h1>
+            <p id="p_usuarios_nuevos">Crear una cuenta tiene muchos beneficios: revisa más rápido, <br>
+                conserva más de una dirección, rastrea pedidos y más.
+            </p>
+        </section>
+    </article>
+    <footer>
+        
+    </footer>
+</body>
+</html>

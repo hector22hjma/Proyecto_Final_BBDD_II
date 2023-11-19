@@ -1,0 +1,294 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./Fonts/Montserrat/static/Montserrat-SemiBold.ttf") format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("./Fonts/Roboto/Roboto-Regular.ttf") format('woff2');
+}
+
+.nav{
+    margin-top: 0%;
+    display: flex;
+    padding: 5px;
+    margin: 0;
+    width: 100%; /* Ancho del nav al 100% del contenedor padre */
+    height: 63px; 
+    background-color: #5667FF;
+    justify-content: space-between;
+}
+
+.Img_opciones {
+  padding: 10px;
+  width: 22px; 
+  height: 23px;
+}
+
+.Img_index {
+  width: 60px; 
+  height: 63px; 
+  padding: 5px;
+}
+
+.Ubicacion_Img_opciones{
+  display: inline-block;
+  padding-right: 15px;
+  margin-top: 10px;
+}
+
+.Ubicacion_Img_index{
+  display: inline-block;
+  order: -1; /* Coloca el elemento "Inicio" al principio */
+  margin-right: auto; /* Mueve los elementos restantes hacia la derecha */
+}
+
+.Ubicacion_Img_opciones, .Ubicacion_Img_index, .search-form {
+  display: inline-block;
+  vertical-align: middle; /* Alinea verticalmente el texto y la imagen */
+}
+
+.Ubicacion_Img_opciones a, .Ubicacion_Img_index a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.search-form {
+  display: inline-block;
+  padding: 15px;
+  align-items: center;
+}
+
+.search-form input {
+  width: 500px; /* Ajusta el ancho según tus preferencias */
+  height: 35px; /* Ajusta la altura según tus preferencias */
+  margin-right: 15px; /* Puedes ajustar el margen derecho según sea necesario */
+  background-color: #D6DAFD;
+  border: none;
+  border-radius: 15px;
+}
+
+.search-form button {
+  width: 30px;
+  height: 30px; /* Ajusta la altura según tus preferencias */
+  background: url("./Iconos_de_opciones/Icono_Buscar.png") no-repeat center center;
+  background-size: cover; /* Ajusta según sea necesario */
+  border: none;
+  padding: 0; /* Elimina el relleno para que la imagen ocupe todo el espacio del botón */
+  cursor: pointer;
+  text-indent: -9999px; /* Oculta el texto del botón */
+  white-space: nowrap; /* Evita que el texto se envuelva */
+  margin-left: 0px;
+  margin-right: 12px;
+}
+
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-button {
+  position: absolute;
+  top: 3px;
+  right: 11px;
+  width: 30px; /* Ajusta el ancho según tus preferencias */
+  height: 100%;
+  background: url("./Iconos_de_opciones/Icono_Buscar.png") no-repeat center center;
+  background-size: contain; /* Ajusta según sea necesario */
+  border: none;
+  padding: 0; /* Elimina el relleno para que la imagen ocupe todo el espacio del botón */
+  cursor: pointer;
+}
+
+.search-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 60px;
+  height: 100%;
+  width: 1px; /* Ancho de la línea vertical */
+  background-color: #050505; /* Color de la línea */
+}
+
+#h1_iniciar_sesion{
+  margin-top: 65px;
+  margin-left: 145px;
+  margin-bottom: 20px;
+  font-size:46px;
+  font-family:'Roboto';
+}
+
+#h2_iniciar_sesion{
+  margin-top: 0px;
+  margin-left: 145px;
+  font-size: 20px;
+  color: darkgray;
+  font-family:'Roboto';
+}
+
+#h3_iniciar_sesion1{
+  margin-top: 65px;
+  margin-left: 145px;
+  margin-bottom: 70px;
+  font-family:'Roboto';
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+#h3_iniciar_sesion2{
+  margin-top: 0%;
+  margin-left: 145px;
+  margin-bottom: 25px;
+  font-family:'Roboto';
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+#obligatorio1{
+  margin-top: -94px;
+  margin-left: 310px;
+  margin-bottom: 40px;
+  font-size: 25px;
+  color: rgb(255, 0, 0);
+}
+
+#obligatorio2{
+  margin-top: -49px;
+  margin-left: 250px;
+  margin-bottom: 15px;
+  font-size: 25px;
+  color: rgb(255, 0, 0);
+}
+
+#h4_iniciar_sesion1{
+  margin-top: 45px;
+  margin-left: 145px;
+  font-size: 20px;
+  font-family: 'Roboto';
+  color: rgb(0, 0, 0);
+}
+
+#h4_2{
+  display:grid;
+  padding-top: none;
+  margin-top: -24px;
+  margin-left: 940px;
+  font-size: 15px;
+  font-family: 'Roboto';
+  color: rgb(0, 0, 0);
+}
+
+#correo{
+  display: block;
+  margin-top: -215px;
+  margin-left: 350px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  border: none;
+  background-color: #eaebef;
+  width: 515px;
+  height: 39px;
+}
+
+#contrasena{
+  display: block;
+  margin-top: 0px;
+  margin-left: 350px;
+  border: none;
+  border-radius: 25px;
+  background-color: #eaebef;
+  width: 515px;
+  height: 39px;
+}
+
+#b_iniciar_sesion{
+  margin-top: 80px;
+  margin-left: 750px;
+  margin-right: auto;
+  border-radius: 15px;
+  width: 144px;
+  height: 34px;
+  background-color: #4AC540;
+  border: none;
+  font-size: 15px;
+  font-family: 'Montserrat';
+}
+
+#b_olvidar_contrasena{
+  margin-top: 80px;
+  margin-left: 20px;
+  border-radius: 15px;
+  width: 219px;
+  height: 34px;
+  background-color: #000000;
+  color: #F5F5F5;
+  border: none;
+  font-size: 15px;
+  font-family: 'Montserrat';
+}
+
+#Mostrar_Contrasena{
+  display: block;
+  margin-left: 900px;
+  margin-top: -30px;
+  background-color: #fcd7d7;
+}
+
+#Guardar_Credenciales{
+  display: block;
+  margin-top: 50px;
+  margin-left: 284px;
+  background-color: #fcd7d7;
+}
+
+body {
+  width: 100%; /* Establece el ancho máximo del cuerpo */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+}
+
+/* Estilos personalizados para los checkboxes */
+#Mostrar_Contrasena,
+#Guardar_Credenciales {
+    -webkit-appearance: none; /* Elimina el estilo predeterminado en WebKit/Blink */
+    -moz-appearance: none; /* Elimina el estilo predeterminado en Firefox */
+    appearance: none; /* Elimina el estilo predeterminado en otros navegadores */
+    width: 27px; /* Ajusta el tamaño según sea necesario */
+    height: 24px; /* Ajusta el tamaño según sea necesario */
+    background-color: #fcd7d7;
+    border: 2px solid #ccc;
+    border-radius: 5px; /* Ajusta el radio según sea necesario para bordes redondeados */
+    cursor: pointer;
+    border: none;
+}
+
+#Mostrar_Contrasena:checked,
+#Guardar_Credenciales:checked {
+    background-color: #6dd67e; /* Cambia el color cuando está marcado */
+}
+
+#Regla_Horizontal_Iniciar_Sesion{
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+#h1_usuarios_nuevos{
+  margin-top: 0%;
+  margin-left: 145px;
+  margin-bottom: 30px;
+  font-size:30px;
+  font-family:'Roboto';
+}
+
+#p_usuarios_nuevos{
+  margin-top: 0px;
+  margin-left: 145px;
+  font-size: 20px;
+  color: darkgray;
+  font-family:'Roboto';
+}
+
+
