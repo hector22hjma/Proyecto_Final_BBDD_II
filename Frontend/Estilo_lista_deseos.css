@@ -1,0 +1,50 @@
+body{
+    font-family: 'Roboto';
+}
+
+h1{
+    margin-top: 2%;
+    font-size: 40px;
+    margin-left: 3%;
+}
+
+.producto-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* Estilo para la imagen del producto */
+.producto-imagen {
+    width: 200px; /* Ajusta el tamaño según tus necesidades */
+    height: 200px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* Estilo para el estado y el precio */
+.producto-info {
+    flex: 1;
+    text-align: center;
+}
+
+/* Estilo para el nombre del producto */
+.producto-nombre {
+    flex: 1;
+}
+
+/* Estilo para el botón */
+.producto-boton {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50; /* Color de fondo verde, puedes cambiarlo */
+    color: rgb(2, 2, 2);
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+    width: 184px;
+    height: 40px;
+}

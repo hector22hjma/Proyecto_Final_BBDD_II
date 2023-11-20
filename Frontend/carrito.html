@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi carrito - MHS</title>
     <link rel="stylesheet" type="text/css" href="estilos.css">
+    <link rel="stylesheet" type="text/css" href="EjemploCartSTY.css">
 </head>
 <body>
     <nav class="nav">
@@ -24,8 +25,45 @@
          <li class="Ubicacion_Img_opciones"><a href="carrito.html"> <img class="Img_opciones" src="./Iconos_de_opciones/Icono_Carrito_Compras.png" alt="Carrito"> Carrito</a></li>
  </nav>
     <article>
-        <section>
-
+        <section id="Carrito">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Artículo</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="producto">
+                                <!-- Contenido del producto, como imagen y nombre -->
+                                <img src="./Iconos_de_opciones/Icono_volver.png" alt="Producto 1">
+                                <p>Nombre del Producto 1</p>
+                            </div>
+                        </td>
+                        <td>$20.00</td>
+                        <td>
+                            <input id="Cantidad" value="1">
+                        </td>
+                        <td>$20.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="enlace-overlay1">
+                <a href="index.html">
+                    <img id="Regresar" src="./Iconos_de_opciones/Icono_volver.png" alt="Regresar">
+                    <span>Seguir comprando</span>
+                </a>
+            </div>  
+            <div class="enlace-overlay2">
+                <a href="carrito_vacio.html">
+                    <img id="Regresar" src="./Iconos_de_opciones/102661.png" alt="Vaciar">
+                    <span>Vaciar carrito</span>
+                </a>
+            </div>   
         </section>
     </article>
     <footer>

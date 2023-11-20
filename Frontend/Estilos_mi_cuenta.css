@@ -1,0 +1,50 @@
+body{
+    font-family: 'Roboto';
+}
+
+h1{
+    font-size: 40px;
+    margin-left: 3%;
+}
+
+h2{
+    font-size: 18px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 94%;
+    margin-left: 3%;
+}
+
+th{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #4AC540;
+    width: 257px;
+    height: 51px;
+    color: #000000;
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
