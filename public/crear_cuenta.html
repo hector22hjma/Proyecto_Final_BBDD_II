@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta - MHS</title>
+    <link rel="stylesheet" type="text/css" href="./estilos.css">
+    <link rel="stylesheet" type="text/css" href="./Estilo_crear_cuenta.css">
+    <script src="../Backend/crear_cuenta.js"></script>
+</head>
+<body>
+    <header>
+    <nav class="nav">
+          <li class="search-form">
+             <form action="/buscar" method="get">
+                 <div class="search-container">
+                     <input type="text" name="q" placeholder="Buscar...">
+                     <button type="submit" class="search-button"></button>
+                 </div>
+             </form>
+         </li>                
+         <li class="Ubicacion_Img_opciones"><a href="./mi_cuenta.html"> <img class="Img_opciones" src="./Iconos_de_opciones/Icono_mi_cuenta.png" alt="Inicio"> Mi cuenta</a></li>
+         <li class="Ubicacion_Img_opciones"><a href="./lista_deseos.html"> <img class="Img_opciones" src="./Iconos_de_opciones/Icono_Lista_Deseo_Vacia.png" alt="Lista de deseos"> Lista de deseos</a></li>
+         <li class="Ubicacion_Img_opciones"><a href="./iniciar_sesion.html"> <img class="Img_opciones" src="./Iconos_de_opciones/Icono_usuario_cuenta.png" alt="Iniciar sesion"> Iniciar sesion</a></li>
+         <li class="Ubicacion_Img_opciones"><a href="./crear_cuenta.html"> <img class="Img_opciones" src="./Iconos_de_opciones/Icono_Crear_cuenta.png" alt="Crear cuenta"> Crear cuenta</a></li>
+         <li class="Ubicacion_Img_index"><a href="./index.html"><img class="Img_index" src="./Iconos_de_opciones/Icono_Index.png"></a></li>
+         <li class="Ubicacion_Img_opciones"><a href="./carrito.html"> <img class="Img_opciones" src="./Iconos_de_opciones/Icono_Carrito_Compras.png" alt="Carrito"> Carrito</a></li>
+    </nav>
+</header>
+    <article>
+        <section>
+            <h2>INFORMACIÓN PERSONAL</h2>
+            <form action="/registro" method="post">
+                <!-- Primer nombre -->
+                <h4>Primer nombre</h4>
+                <input id="Entradas_texto" type="text" name="primerNombre" required>
+        
+                <!-- Segundo nombre -->
+                <h4>Segundo nombre</h4>
+                <input id="Entradas_texto" type="text" name="segundoNombre">
+        
+                <!-- Primer apellido -->
+                <h4>Primer apellido</h4>
+                <input id="Entradas_texto" type="text" name="primerApellido" required>
+        
+                <!-- Segundo apellido -->
+                <h4>Segundo apellido</h4>
+                <input id="Entradas_texto" type="text" name="segundoApellido">
+        
+                <!-- CC -->
+                <h4>CC</h4>
+                <input id="Entradas_texto" type="text" name="cc" required>
+
+                <!--Numero de celular-->
+                <h4>Numero de celular</h4>
+                <input id="Entradas_texto" type="text" name="num_celular" required>
+
+                <!--Numero de celular-->
+                <h4>Fecha de nacimiento</h4>
+                <input id="Entradas_texto" type="date" name="fecha_nacimiento" required>
+        
+                <h2>INFORMACIÓN DE INICIO DE SESIÓN</h2>
+                
+                <!-- Correo Electrónico -->
+                <h4>Correo Electrónico</h4>
+                <input id="Entradas_texto" type="email" name="correo" required>
+        
+                <!-- Contraseña -->
+                <h4>Contraseña</h4>
+                <input id="Entradas_texto" type="password" name="contrasena" required>
+        
+                <!-- Confirmar contraseña -->
+                <h4>Confirmar contraseña</h4>
+                <input id="Entradas_texto" type="password" name="confirmarContrasena" required>
+        
+                <!-- Recordarme -->
+                <h4>Recordarme</h4>
+                <input id="Check" type="checkbox" name="recordarme">
+        
+                <!-- Botón de enviar -->
+                <input id="Boton_enviar" type="submit" value="Crear Cuenta">
+                <a id="href_atras" href="./iniciar_sesion.html"><input id="Boton_atras" type="button" value="Atras"></a>
+            </form>
+        </section>
+    </article>
+    <footer>
+        
+    </footer>
+</body>
+</html>

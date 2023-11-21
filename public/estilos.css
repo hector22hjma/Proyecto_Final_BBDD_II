@@ -304,4 +304,8 @@ body {
   font-family: 'Montserrat';
 }
 
+#href_crear_cuenta{
+  text-decoration: none;
+}
+
 

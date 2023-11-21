@@ -1,0 +1,40 @@
+/* Estilo para el contenedor del banner */
+.banner-container {
+    margin-top: 30px;
+    width: 100%;
+    height: 470px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Estilo para las imágenes del banner */
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantener la proporción original de la imagen */
+    display: none;
+}
+
+/* Estilo para los radiobuttons */
+.radio-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.radio-button {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Estilo para el radiobutton activo */
+.radio-button:checked {
+    background-color: #555;
+}
