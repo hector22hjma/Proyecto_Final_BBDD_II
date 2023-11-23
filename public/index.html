@@ -27,13 +27,17 @@
                 <li class="Ubicacion_Img_opciones"><a href="./carrito.html"><img class="Img_opciones" src="./Iconos_de_opciones/Icono_Carrito_Compras.png" alt="Carrito"> Carrito</a></li>
         </nav>
     <article> 
+        <main>
         <section>
             <!-- Contenedor del banner -->
             <div class="banner-container">
                 <!-- Imágenes del banner -->
-                <img src="./Imagenes_productos\Banners\plantilla-portada-facebook-super-rebajas-black-friday_106176-1578.jpg" alt="Banner 1" class="banner-img">
-                <img src="./Imagenes_productos\Banners\raton-teclado-fondo-oscuro-banner-venta-viernes-negro_444361-37.jpg" alt="Banner 2" class="banner-img">
-                <img src="./Imagenes_productos\Banners\diseno-portada-medios-sociales-camara-auriculares-juegos-conceptos-antecedentes-gadget_556601-221.png" alt="Banner 3" class="banner-img">
+                <img src="./Imagenes_productos\Banners\plantilla-portada-facebook-super-rebajas-black-friday_106176-1578.jpg"
+                    alt="Banner 1" class="banner-img">
+                <img src="./Imagenes_productos\Banners\raton-teclado-fondo-oscuro-banner-venta-viernes-negro_444361-37.jpg"
+                    alt="Banner 2" class="banner-img">
+                <img src="./Imagenes_productos\Banners\diseno-portada-medios-sociales-camara-auriculares-juegos-conceptos-antecedentes-gadget_556601-221.png"
+                    alt="Banner 3" class="banner-img">
         
                 <!-- Radiobuttons para cambiar las imágenes -->
                 <div class="radio-buttons">
@@ -47,7 +51,7 @@
                 let currentIndex = 0;
                 const images = document.querySelectorAll('.banner-img');
                 const radioButtons = document.querySelectorAll('.radio-button');
-        
+
                 function showImage(index) {
                     images.forEach((image, i) => {
                         image.style.display = i === index ? 'block' : 'none';
@@ -56,15 +60,15 @@
                         radio.checked = i === index;
                     });
                 }
-        
+
                 function nextImage() {
                     currentIndex = (currentIndex + 1) % images.length;
                     showImage(currentIndex);
                 }
-        
+
                 // Cambiar automáticamente la imagen cada 3 segundos (ajusta según tus necesidades)
                 setInterval(nextImage, 3000);
-        
+
                 // Mostrar la imagen correspondiente cuando se hace clic en un radiobutton
                 radioButtons.forEach((radio, i) => {
                     radio.addEventListener('click', () => {
@@ -72,12 +76,20 @@
                         showImage(currentIndex);
                     });
                 });
-        
+
                 // Mostrar la primera imagen al cargar la página
                 showImage(currentIndex);
             </script>
         
         </section>
+        <section id="Arma_tu_pc">
+
+        </section>
+        <section id="Gamer">
+
+        </section>
+        </main>
+
     </article>
     <footer>
         <p>

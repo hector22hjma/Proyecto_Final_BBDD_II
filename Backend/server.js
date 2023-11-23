@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
-// Configuración para servir archivos estáticos desde la carpeta 'Public'
+// Configuración para servir archivos estáticos desde la carpeta 'public'
 app.use(express.static(path.join(__dirname, '../public')));
 
 // Ruta para servir el archivo index.html
@@ -30,15 +30,14 @@ connection.connect((err) => {
     console.error('Error de conexión a la base de datos:', err);
     return;
   }
-  console.log('Conexión exitosa a la base de datos');
+  console.log('Conexión exitosa a la base de datos');//Mostrar si se puedo conectar o no
 });
 
 // Middleware para procesar datos de formularios
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//Manejo del POST
+//Manejo del POST registro--------------------------------------
 app.post('/registro', (req,res) => {
- // Obtén los datos del formulario desde req.body
  const {
   primerNombre,
   segundoNombre,
@@ -80,7 +79,7 @@ connection.query(
           return res.status(500).send('Error interno del servidor');
         }
 
-        // Éxito en ambas inserciones
+        // Mensaje de exito en la creacion
         res.send('Cuenta creada exitosamente');
       }
     );
