@@ -2,24 +2,26 @@
 .banner-container {
     margin-top: 30px;
     width: 100%;
-    height: 470px;
+    height: 400px;
     overflow: hidden;
     position: relative;
+    bottom: 0%;
 }
 
 /* Estilo para las imágenes del banner */
 .banner-img {
     width: 100%;
-    height: 100%;
+    height:100%;
     object-fit: cover; /* Mantener la proporción original de la imagen */
-    display: none;
+    bottom: 0%;
 }
 
 /* Estilo para los radiobuttons */
 .radio-buttons {
     position: absolute;
-    bottom: 10px;
+    top: 370px;
     left: 50%;
+    bottom: auto;
     transform: translateX(-50%);
     z-index: 1;
 }
@@ -30,11 +32,43 @@
     height: 12px;
     background-color: #bbb;
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 5px;
     cursor: pointer;
+    bottom: 0%;
 }
 
 /* Estilo para el radiobutton activo */
 .radio-button:checked {
     background-color: #555;
 }
+
+.Contenedor{
+    /*margin-bottom: 50px;*/
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    top: 40px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+#img_resenas, #img_redes_sociales, #img_gamer, #img_empresarial{
+    width: 85%;
+    height: 80%;
+    margin-left: 7px;
+}
+
+#Primeras_4_secciones h3{
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin: 0;
+    width: 81.99%;
+    font-size: 20px;
+    margin-left: 7px;
+    font-family: 'roboto';
+    text-align: left;
+}
+

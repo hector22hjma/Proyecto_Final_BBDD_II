@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,91 +10,118 @@
     <link rel="stylesheet" type="text/css" href="./estilos.css">
     <link rel="stylesheet" type="text/css" href="./Estilo_index.css">
 </head>
+
 <body>
-        <nav class="nav">
-                 <li class="search-form">
-                    <form action="/buscar" method="get">
-                        <div class="search-container">
-                            <input type="text" name="q" placeholder="Buscar...">
-                            <button type="submit" class="search-button"></button>
-                        </div>
-                    </form>
-                </li>                
-                <li class="Ubicacion_Img_opciones"><a href="./mi_cuenta.html"> <img class="Img_opciones" src="./Iconos_de_opciones\Icono_mi_cuenta.png" alt="Inicio"> Mi cuenta</a></li>
-                <li class="Ubicacion_Img_opciones"><a href="./lista_deseos.html"> <img class="Img_opciones" src="./Iconos_de_opciones\Icono_Lista_Deseo_Vacia.png" alt="Lista de deseos"> Lista de deseos</a></li>
-                <li class="Ubicacion_Img_opciones"><a href="./iniciar_sesion.html"> <img class="Img_opciones" src="./Iconos_de_opciones\Icono_usuario_cuenta.png" alt="Iniciar sesion"> Iniciar sesion</a></li>
-                <li class="Ubicacion_Img_opciones"><a href="./crear_cuenta.html"> <img class="Img_opciones" src="./Iconos_de_opciones\Icono_Crear_cuenta.png" alt="Crear cuenta"> Crear cuenta</a></li>
-                <li class="Ubicacion_Img_index"><a href="./index.html"><img class="Img_index" src="./Iconos_de_opciones/Icono_Index.png"></a></li>
-                <li class="Ubicacion_Img_opciones"><a href="./carrito.html"><img class="Img_opciones" src="./Iconos_de_opciones/Icono_Carrito_Compras.png" alt="Carrito"> Carrito</a></li>
-        </nav>
-    <article> 
-        <main>
-        <section>
-            <!-- Contenedor del banner -->
-            <div class="banner-container">
-                <!-- Imágenes del banner -->
-                <img src="./Imagenes_productos\Banners\plantilla-portada-facebook-super-rebajas-black-friday_106176-1578.jpg"
-                    alt="Banner 1" class="banner-img">
-                <img src="./Imagenes_productos\Banners\raton-teclado-fondo-oscuro-banner-venta-viernes-negro_444361-37.jpg"
-                    alt="Banner 2" class="banner-img">
-                <img src="./Imagenes_productos\Banners\diseno-portada-medios-sociales-camara-auriculares-juegos-conceptos-antecedentes-gadget_556601-221.png"
-                    alt="Banner 3" class="banner-img">
-        
-                <!-- Radiobuttons para cambiar las imágenes -->
-                <div class="radio-buttons">
-                    <input type="radio" class="radio-button" name="radio" checked>
-                    <input type="radio" class="radio-button" name="radio">
-                    <input type="radio" class="radio-button" name="radio">
+    <header>
+    <nav class="nav">
+        <li class="search-form">
+            <form action="/buscar" method="get">
+                <div class="search-container">
+                    <input type="text" name="q" placeholder="Buscar...">
+                    <button type="submit" class="search-button"></button>
                 </div>
-            </div>
-            <script>
-                // JavaScript para controlar el cambio automático de imágenes
-                let currentIndex = 0;
-                const images = document.querySelectorAll('.banner-img');
-                const radioButtons = document.querySelectorAll('.radio-button');
+            </form>
+        </li>
+        <li class="Ubicacion_Img_opciones"><a href="./mi_cuenta.html"> <img class="Img_opciones"
+                    src="./Iconos_de_opciones\Icono_mi_cuenta.png" alt="Inicio"> Mi cuenta</a></li>
+        <li class="Ubicacion_Img_opciones"><a href="./lista_deseos.html"> <img class="Img_opciones"
+                    src="./Iconos_de_opciones\Icono_Lista_Deseo_Vacia.png" alt="Lista de deseos"> Lista de deseos</a>
+        </li>
+        <li class="Ubicacion_Img_opciones"><a href="./iniciar_sesion.html"> <img class="Img_opciones"
+                    src="./Iconos_de_opciones\Icono_usuario_cuenta.png" alt="Iniciar sesion"> Iniciar sesion</a></li>
+        <li class="Ubicacion_Img_opciones"><a href="./crear_cuenta.html"> <img class="Img_opciones"
+                    src="./Iconos_de_opciones\Icono_Crear_cuenta.png" alt="Crear cuenta"> Crear cuenta</a></li>
+        <li class="Ubicacion_Img_index"><a href="./index.html"><img class="Img_index"
+                    src="./Iconos_de_opciones/Icono_Index.png"></a></li>
+        <li class="Ubicacion_Img_opciones"><a href="./carrito.html"><img class="Img_opciones"
+                    src="./Iconos_de_opciones/Icono_Carrito_Compras.png" alt="Carrito"> Carrito</a>
+        </li>
+    </nav>
+    </header>
+    <article>
+        <main>
+            <section>
+                <!-- Contenedor del banner -->
+                <div class="banner-container">
+                    <!-- Imágenes del banner -->
+                    <img src="./Imagenes_productos\Banners\plantilla-portada-facebook-super-rebajas-black-friday_106176-1578.jpg"
+                        alt="Banner 1" class="banner-img">
+                    <img src="./Imagenes_productos\Banners\raton-teclado-fondo-oscuro-banner-venta-viernes-negro_444361-37.jpg"
+                        alt="Banner 2" class="banner-img">
+                    <img src="./Imagenes_productos\Banners\diseno-portada-medios-sociales-camara-auriculares-juegos-conceptos-antecedentes-gadget_556601-221.png"
+                        alt="Banner 3" class="banner-img">
 
-                function showImage(index) {
-                    images.forEach((image, i) => {
-                        image.style.display = i === index ? 'block' : 'none';
-                    });
-                    radioButtons.forEach((radio, i) => {
-                        radio.checked = i === index;
-                    });
-                }
+                    <!-- Radiobuttons para cambiar las imágenes -->
+                    <div class="radio-buttons">
+                        <input type="radio" class="radio-button" name="radio" checked>
+                        <input type="radio" class="radio-button" name="radio">
+                        <input type="radio" class="radio-button" name="radio">
+                    </div>
+                </div>
+                <script>
+                    // JavaScript para controlar el cambio automático de imágenes
+                    let currentIndex = 0;
+                    const images = document.querySelectorAll('.banner-img');
+                    const radioButtons = document.querySelectorAll('.radio-button');
 
-                function nextImage() {
-                    currentIndex = (currentIndex + 1) % images.length;
-                    showImage(currentIndex);
-                }
+                    function showImage(index) {
+                        images.forEach((image, i) => {
+                            image.style.display = i === index ? 'block' : 'none';
+                        });
+                        radioButtons.forEach((radio, i) => {
+                            radio.checked = i === index;
+                        });
+                    }
 
-                // Cambiar automáticamente la imagen cada 3 segundos (ajusta según tus necesidades)
-                setInterval(nextImage, 3000);
-
-                // Mostrar la imagen correspondiente cuando se hace clic en un radiobutton
-                radioButtons.forEach((radio, i) => {
-                    radio.addEventListener('click', () => {
-                        currentIndex = i;
+                    function nextImage() {
+                        currentIndex = (currentIndex + 1) % images.length;
                         showImage(currentIndex);
+                    }
+
+                    // Cambiar automáticamente la imagen cada 3 segundos (ajusta según tus necesidades)
+                    setInterval(nextImage, 3000);
+
+                    // Mostrar la imagen correspondiente cuando se hace clic en un radiobutton
+                    radioButtons.forEach((radio, i) => {
+                        radio.addEventListener('click', () => {
+                            currentIndex = i;
+                            showImage(currentIndex);
+                        });
                     });
-                });
 
-                // Mostrar la primera imagen al cargar la página
-                showImage(currentIndex);
-            </script>
-        
-        </section>
-        <section id="Arma_tu_pc">
+                    // Mostrar la primera imagen al cargar la página
+                    showImage(currentIndex);
+                </script>
 
-        </section>
-        <section id="Gamer">
-
-        </section>
+            </section>
+            <section id="Primeras_4_secciones">
+                <div class="Contenedor">
+                    <div id="resenas">
+                        <h3>Reseñas</h3>
+                        <img id="img_resenas" src="./Primeras_4_secciones/jovenes-tiro-medio-resenas_23-2149394417.jpg"
+                            alt="Icono de reseñas">
+                    </div>
+                    <div id="redes_sociales">
+                        <h3>Nuestras redes sociales</h3>
+                        <img id="img_redes_sociales" src="./Primeras_4_secciones/vector-iconos-redes-sociales-logotipos-facebook-instagram-twitter-tiktok-youtube_53876-126271.jpg"
+                            alt="Imagen redes sociales">
+                    </div>
+                    <div id="gamer">
+                        <h3>Sección gamer</h3>
+                        <img id="img_gamer" src="./Primeras_4_secciones/vista-configuracion-controlador-teclado-juegos-neon-iluminado_23-2149529367.png"
+                            alt="Imagen seccion gamer">
+                    </div>
+                    <div id="empresarial">
+                        <h3>Seccion empresarial</h3>
+                        <img id="img_empresarial" src="./Primeras_4_secciones/cerrar-manos-escribiendo-escritorio_23-2148994165.jpg"
+                            alt="imagen seccion empresarial">
+                    </div>
+            </section>
         </main>
-
     </article>
     <footer>
         <p>
-            Dirección: Montería, Córdoba. 
+            Dirección: Montería, Córdoba.
         </p>
         <ul>
             <li><a href="terminos_condiciones.html"></a></li>
@@ -102,4 +130,5 @@
         </ul>
     </footer>
 </body>
+
 </html>
