@@ -1,19 +1,18 @@
 /* Estilo para el contenedor del banner */
 .banner-container {
-    margin-top: 30px;
+    margin-top: 80px;
     width: 100%;
-    height: 400px;
+    height: 450px;
     overflow: hidden;
     position: relative;
-    bottom: 0%;
+    bottom: 50px;
 }
 
 /* Estilo para las imágenes del banner */
 .banner-img {
     width: 100%;
     height:100%;
-    object-fit: cover; /* Mantener la proporción original de la imagen */
-    bottom: 0%;
+    object-fit: cover; 
 }
 
 /* Estilo para los radiobuttons */
@@ -47,15 +46,19 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
+    height: 199px;
     text-align: center;
-    top: 40px;
-    position: relative;
-    margin-bottom: 40px;
+    top: 200px;
+    margin-bottom: 20px;
 }
 
+#resenas, #redes_sociales, #gamer, #empresarial{
+    width: 100%;
+    height: 230px;
+}
 #img_resenas, #img_redes_sociales, #img_gamer, #img_empresarial{
-    width: 85%;
-    height: 80%;
+    width: 87%;
+    height: 85%;
     margin-left: 7px;
 }
 
@@ -65,10 +68,229 @@
     color: white;
     padding: 5px;
     margin: 0;
-    width: 81.99%;
+    width: 84%;
     font-size: 20px;
     margin-left: 7px;
     font-family: 'roboto';
     text-align: left;
 }
+
+.Contenedor_2_secciones{
+    margin-top: 70px;
+    width: 100%;
+    height: 249px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Seccion1, .Seccion2{
+    width: 631px;
+    height: 249px;
+    position: relative;
+}
+
+#h3_2_1{
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1;
+    font-family: 'Roboto';
+    font-size: 30px;
+    text-align:center;
+}
+#img_2_2, #img_2_1{
+    width: 620px;
+    height: 249px;
+}
+
+#regla1, #regla2, #regla3, #regla4, #regla5{
+    margin-top: 30px;
+}
+
+.Novedades1{
+    top: 40px;
+    width: 100%;
+    height: 188px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.n1_p1, .n1_p2, .n1_p3, .n1_p4{
+    width: 274px;
+    height: 188;
+    text-align: center;
+    display: flex;
+}
+
+#img_n1_p1, #img_n1_p2, #img_n1_p3, #img_n1_p4{
+    width: 248px;
+    height: 188;
+    object-fit: cover;
+}
+
+.Novedades1_detalles{
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+#Detalles_n1_p1, #Detalles_n1_p2, #Detalles_n1_p3, #Detalles_n1_p4{
+    width: 263px;
+    height: 94px;
+}
+
+#h3_precio{
+    text-align: left;
+    font-size: 15px;
+}
+
+#descripcion{
+    text-align: left;
+    font-size: 15px;
+}
+
+.Botones{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content:left;
+    
+}
+
+.cont-botones{
+    margin-left: 36px;
+    width: 184px;
+    height: 40px;
+    margin-right: 115px;
+}
+
+#btn_estado{
+    width: 184px;
+    height: 40px;
+    font-family: 'roboto';
+    font-size: 20px;
+    text-align: left;
+    border-radius: 45px;
+    border: none;
+    background-color: #4CAF50;
+}
+
+/*Seccion novedades N°2*/
+
+.Novedades2{
+    top: 40px;
+    width: 100%;
+    height: 188px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.n2_p1, .n2_p2, .n2_p3, .n2_p4{
+    width: 274px;
+    height: 188;
+    text-align: center;
+    display: flex;
+}
+
+#img_n2_p1, #img_n2_p2, #img_n2_p3, #img_n2_p4{
+    width: 248px;
+    height: 188;
+    object-fit: cover;
+}
+
+.Novedades2_detalles{
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+#Detalles_n2_p1, #Detalles_n2_p2, #Detalles_n2_p3, #Detalles_n2_p4{
+    width: 263px;
+    height: 94px;
+}
+
+/*Seccion productos destacados1*/
+
+.Productos_destacados1{
+    top: 40px;
+    width: 100%;
+    height: 188px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pd1_p1, .pd1_p2, .pd1_p3, .pd1_p4{
+    width: 274px;
+    height: 188;
+    text-align: center;
+    display: flex;
+}
+
+#img_pd1_p1, #img_pd1_p2, #img_pd1_p3, #img_pd1_p4{
+    width: 248px;
+    height: 188;
+    object-fit: cover;
+}
+
+.Productos_destacados_detalles1{
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+#Detalles_pd1_p1, #Detalles_pd1_p2, #Detalles_pd1_p3, #Detalles_pd1_p4{
+    width: 263px;
+    height: 94px;
+}
+
+/*Seccion productos destacados2*/
+
+.Novedades2{
+    top: 40px;
+    width: 100%;
+    height: 188px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.n2_p1, .n2_p2, .n2_p3, .n2_p4{
+    width: 274px;
+    height: 188;
+    text-align: center;
+    display: flex;
+}
+
+#img_n2_p1, #img_n2_p2, #img_n2_p3, #img_n2_p4{
+    width: 248px;
+    height: 188;
+    object-fit: cover;
+}
+
+.Novedades2_detalles{
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+#Detalles_n2_p1, #Detalles_n2_p2, #Detalles_n2_p3, #Detalles_n2_p4{
+    width: 263px;
+    height: 94px;
+}
+
 

@@ -19,10 +19,11 @@ h1{
 
 /* Estilo para la imagen del producto */
 .producto-imagen {
-    width: 200px; /* Ajusta el tamaño según tus necesidades */
-    height: 200px;
+    width: 248px; /* Ajusta el tamaño según tus necesidades */
+    height: 187px;
     margin-right: 10px;
     margin-left: 10px;
+    object-fit:cover;
 }
 
 /* Estilo para el estado y el precio */
