@@ -119,6 +119,24 @@ app.post('/login', (req, res) => {
   });
 });
 
+//Cargar dinamicamente los productos desde la base de datos:
+app.get('/productos', (req, res) => {
+  // Consulta para obtener la lista de productos desde la base de datos
+  const consultaProductos = `
+    SELECT * FROM PRODUCTO
+  `;
+
+  connection.query(consultaProductos, (err, results) => {
+    if (err) {
+      console.error('Error al obtener la lista de productos:', err);
+      return res.status(500).send('Error interno del servidor');
+    }
+
+    // Enviar la lista de productos como respuesta
+    res.json(results);
+  });
+});
+
 
 // Escucha en el puerto especificado
 app.listen(port, () => {

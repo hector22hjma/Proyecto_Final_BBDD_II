@@ -1,0 +1,87 @@
+/* Estilos para el contenedor de productos */
+#Novedades, #Productos_destacados {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Estilos para los contenedores de productos */
+.contenedor_producto {
+  /*margin-left: 20px;*/
+  /*display:contents;*/
+  justify-content: space-around;
+  width: 300px;
+  height: 350px;
+  /*align-items:baseline;*/
+  padding: 5px;
+  border: 1px solid #ddd;
+  /*margin-right: 30px;*/
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Estilos para cada producto */
+.imagen_div {
+  text-align: center;
+  width: 300px;
+  height: 200px;
+}
+
+.imagen_producto {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.descripcion_div {
+  width: 300px;
+  height: 50px;
+}
+
+.descripcion{
+  font-family: 'roboto';
+  font-size: 15px;
+  text-align: left;
+}
+
+.precio_div{
+  width: 60px;
+  height: 20px;
+  margin-bottom: 0%;
+}
+
+.boton_div {
+  width: 200px;
+  height: 45px;
+}
+
+.boton{
+  background-color: #4caf50;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  height: 45px;
+  border-radius: 45px;
+  border: none;
+}
+
+.producto button:disabled {
+  background-color: #aaaaaa;
+  cursor: not-allowed;
+}
+
+/* Estilos para la línea divisoria */
+.regla {
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.Nombre_seccion{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#h2_Novedades, #h2_Destacados{
+  font-family: 'montserrat';
+  font-size: 20px;
+}
