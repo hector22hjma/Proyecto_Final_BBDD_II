@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi carrito - MHS</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <link rel="stylesheet" type="text/css" href="EjemploCartSTY.css">
+    <link rel="script" href="script_cargar_productos.js">
+</head>
+<body>
+    <nav class="nav">
+          <li class="search-form">
+             <form action="/buscar" method="get">
+                 <div class="search-container">
+                     <input type="text" name="q" placeholder="Buscar...">
+                     <button type="submit" class="search-button"></button>
+                 </div>
+             </form>
+         </li>                
+         <li class="Ubicacion_Img_opciones"><a href="mi_cuenta.html"> <img class="Img_opciones" src="./Iconos_de_opciones/Icono_mi_cuenta.png" alt="Inicio"> Mi cuenta</a></li>
+         <li class="Ubicacion_Img_opciones"><a href="lista_deseos.html"> <img class="Img_opciones" src="./Iconos_de_opciones/Icono_Lista_Deseo_Vacia.png" alt="Lista de deseos"> Lista de deseos</a></li>
+         <li class="Ubicacion_Img_opciones"><a href="iniciar_sesion.html"> <img class="Img_opciones" src="./Iconos_de_opciones/Icono_usuario_cuenta.png" alt="Iniciar sesion"> Iniciar sesion</a></li>
+         <li class="Ubicacion_Img_opciones"><a href="crear_cuenta.html"> <img class="Img_opciones" src="./Iconos_de_opciones/Icono_Crear_cuenta.png" alt="Crear cuenta"> Crear cuenta</a></li>
+         <li class="Ubicacion_Img_index"><a href="index.html"><img class="Img_index" src="./Iconos_de_opciones/Icono_Index.png"></a></li> 
+         <li class="Ubicacion_Img_opciones"><a href="carrito.html"> <img class="Img_opciones" src="./Iconos_de_opciones/Icono_Carrito_Compras.png" alt="Carrito"> Carrito</a></li>
+ </nav>
+    <article>
+        <section id="Carrito">
+            <table id="tabla_carrito">
+                <tbody id="cuerpo_tabla_carrito">
+ 
+                </tbody>
+            </table>
+            <!--Inicio del script-->
+
+
+            <!--Fin del script-->
+            <div class="enlace-overlay1">
+                <a href="index.html">
+                    <img id="Regresar" src="./Iconos_de_opciones/Icono_volver.png" alt="Regresar">
+                    <span>Seguir comprando</span>
+                </a>
+            </div>  
+            <div class="enlace-overlay2">
+                <a href="carrito_vacio.html">
+                    <img id="Regresar" src="./Iconos_de_opciones/102661.png" alt="Vaciar">
+                    <span>Vaciar carrito</span>
+                </a>
+            </div>   
+        </section>
+    </article>
+    <footer>
+        
+    </footer>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  // Obtener la tabla y su cuerpo
+  var tbody = document.getElementById("cuerpo_tabla_carrito");
+
+  // Obtener productos del almacenamiento local (si hay alguno)
+  var productosEnCarrito = JSON.parse(localStorage.getItem('productosEnCarrito')) || [];
+
+  // Función para agregar un producto al carrito
+  function agregarAlCarrito(nombreProducto, precioProducto) {
+    // Verificar si el producto ya está en el carrito
+    var productoExistente = productosEnCarrito.find(producto => producto.nombre === nombreProducto);
+
+    if (productoExistente) {
+      // Si el producto ya está en el carrito, aumentar la cantidad
+      productoExistente.cantidad++;
+    } else {
+      // Si el producto no está en el carrito, agregarlo
+      productosEnCarrito.push({
+        nombre: nombreProducto,
+        precio: precioProducto,
+        cantidad: 1
+      });
+    }
+
+    // Actualizar el almacenamiento local con la nueva lista de productos en el carrito
+    localStorage.setItem('productosEnCarrito', JSON.stringify(productosEnCarrito));
+
+    // Actualizar la tabla con la nueva información
+    actualizarTabla();
+  }
+
+  // Función para actualizar la tabla con los productos en el carrito
+  function actualizarTabla() {
+    // Limpiar el cuerpo de la tabla
+    tbody.innerHTML = '';
+
+    // Iterar sobre los productos en el carrito y agregar filas a la tabla
+    productosEnCarrito.forEach(producto => {
+      var nuevaFila = document.createElement('tr');
+      nuevaFila.innerHTML = `
+        <td>
+          <div class="producto">
+            <img src="./Iconos_de_opciones/Icono_volver.png" alt="${producto.nombre}">
+            <p>${producto.nombre}</p>
+          </div>
+        </td>
+        <td>${producto.precio}</td>
+        <td>
+          <input class="cantidad" value="${producto.cantidad}" data-nombre="${producto.nombre}" data-precio="${producto.precio}">
+        </td>
+        <td>${producto.cantidad * parseFloat(producto.precio)}</td>
+      `;
+
+      // Agregar la nueva fila al cuerpo de la tabla
+      tbody.appendChild(nuevaFila);
+    });
+  }
+
+  // Asociar la función agregarAlCarrito al evento de cambio de la cantidad
+  tbody.addEventListener('change', function(event) {
+    if (event.target.classList.contains('cantidad')) {
+      var nombreProducto = event.target.dataset.nombre;
+      var precioProducto = event.target.dataset.precio;
+      var nuevaCantidad = parseInt(event.target.value, 10);
+
+      // Actualizar la cantidad en la lista de productos en el carrito
+      var productoExistente = productosEnCarrito.find(producto => producto.nombre === nombreProducto);
+      if (productoExistente) {
+        productoExistente.cantidad = nuevaCantidad;
+      }
+
+      // Actualizar el almacenamiento local con la nueva lista de productos en el carrito
+      localStorage.setItem('productosEnCarrito', JSON.stringify(productosEnCarrito));
+
+      // Actualizar la tabla con la nueva información
+      actualizarTabla();
+    }
+  });
+
+  // Llamar a la función de actualización de la tabla cuando se carga la página
+  actualizarTabla();
+});
+
+</script>
+
+</html>
