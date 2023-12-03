@@ -7,6 +7,56 @@
     <link rel="stylesheet" type="text/css" href="estilos.css">
     <link rel="stylesheet" type="text/css" href="EjemploCartSTY.css">
     <link rel="script" href="script_cargar_productos.js">
+
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+}
+
+div {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+input {
+    padding: 5px;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+p {
+    margin: 10px 0;
+}
+
+span {
+    font-weight: bold;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
 </head>
 <body>
     <nav class="nav">
@@ -28,14 +78,29 @@
     <article>
         <section id="Carrito">
             <table id="tabla_carrito">
+              <thead>
+                <tr>
+                    <th>Artículo</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
                 <tbody id="cuerpo_tabla_carrito">
  
                 </tbody>
             </table>
-            <!--Inicio del script-->
-
-
-            <!--Fin del script-->
+            
+            <div>
+              <h2>Resumen</h2>
+              <p>Redimir código: <input type="text" id="codigoDescuento"></p>
+              <hr>
+              <p>Subtotal: <span id="subtotal">$0.00</span></p>
+              <p>IVA (19%): <span id="iva">$0.00</span></p>
+              <p>Total: <span id="total">$0.00</span></p>
+              <button onclick="procesarCompra()">Procesar compra</button>
+          </div>
+          
             <div class="enlace-overlay1">
                 <a href="index.html">
                     <img id="Regresar" src="./Iconos_de_opciones/Icono_volver.png" alt="Regresar">
@@ -98,7 +163,7 @@
       nuevaFila.innerHTML = `
         <td>
           <div class="producto">
-            <img src="./Iconos_de_opciones/Icono_volver.png" alt="${producto.nombre}">
+            <img src="${producto.imagen}" alt="${producto.nombre}">
             <p>${producto.nombre}</p>
           </div>
         </td>
@@ -138,6 +203,42 @@
   // Llamar a la función de actualización de la tabla cuando se carga la página
   actualizarTabla();
 });
+
+</script>
+
+<script>
+  // Función para calcular el subtotal de los productos en el carrito
+function calcularSubtotal() {
+    return productosEnCarrito.reduce((total, producto) => {
+        return total + producto.cantidad * parseFloat(producto.precio);
+    }, 0);
+}
+
+// Función para calcular el IVA
+function calcularIVA(subtotal) {
+    const porcentajeIVA = 0.19; // 19%
+    return subtotal * porcentajeIVA;
+}
+
+// Función para calcular el total (subtotal + IVA)
+function calcularTotal(subtotal, iva) {
+    return subtotal + iva;
+}
+
+// Función para actualizar el resumen del carrito
+function actualizarResumen() {
+    const subtotal = calcularSubtotal();
+    const iva = calcularIVA(subtotal);
+    const total = calcularTotal(subtotal, iva);
+
+    // Actualizar elementos HTML con los resultados
+    document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+    document.getElementById('iva').textContent = `$${iva.toFixed(2)}`;
+    document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+}
+
+// Llamada inicial para cargar el resumen al cargar la página
+actualizarResumen();
 
 </script>
 

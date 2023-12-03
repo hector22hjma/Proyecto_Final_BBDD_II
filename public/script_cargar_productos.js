@@ -77,7 +77,7 @@ fetch('/productos')
           boton.dataset.precio = producto.precio;
           // Asociar la función agregarAlCarrito al evento de clic del botón
           boton.addEventListener("click", function() {
-            agregarAlCarrito(producto.descripcion, producto.precio);
+            agregarAlCarrito(producto.descripcion, producto.precio, producto.imagen);
           });
 
           // Agregar el botón al subcontenedor del botón
@@ -129,7 +129,7 @@ fetch('/productos')
     }*/
 
 
-    function agregarAlCarrito(nombreProducto, precioProducto) {
+    function agregarAlCarrito(nombreProducto, precioProducto, imagenProducto) {
       // Obtener la lista de productos en el carrito del almacenamiento local
       var productosEnCarrito = JSON.parse(localStorage.getItem('productosEnCarrito')) || [];
     
@@ -144,6 +144,7 @@ fetch('/productos')
         productosEnCarrito.push({
           nombre: nombreProducto,
           precio: precioProducto,
+          imagen: imagenProducto,
           cantidad: 1
         });
       }
@@ -152,6 +153,7 @@ fetch('/productos')
       localStorage.setItem('productosEnCarrito', JSON.stringify(productosEnCarrito));
     
       console.log('Producto agregado al carrito:', nombreProducto);
+      alert('Producto agregado al carrito:', nombreProducto);
     }
     
     
